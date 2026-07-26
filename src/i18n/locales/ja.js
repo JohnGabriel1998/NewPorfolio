@@ -94,7 +94,7 @@ const ja = {
     moreLabel: 'もっと見る',
     moreHeading: '制作の背景も知りたいですか？',
     links: [
-      { href: 'https://react-portfolio-wgzp.vercel.app', label: '公開ポートフォリオ' },
+      { href: 'https://new-porfolio-rosy.vercel.app/', label: '公開ポートフォリオ' },
       { href: 'https://github.com/JohnGabriel1998', label: 'GitHub' },
       { href: 'https://linkedin.com/in/johngabrielbagacina', label: 'LinkedIn' },
       { href: 'https://youtu.be/bevnAtDiPUQ?si=uhKGvl3dFoUggTIG', label: 'スピーチ受賞' },
@@ -116,7 +116,7 @@ const ja = {
         copy:
           '日英対応、ライト/ダークモード、モバイルファーストのレスポンシブ構成のポートフォリオ。',
         tags: ['React', 'TypeScript', 'Tailwind'],
-        link: 'https://react-portfolio-wgzp.vercel.app',
+        link: 'https://new-porfolio-rosy.vercel.app/',
       },
       {
         type: 'tasks',

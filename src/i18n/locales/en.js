@@ -94,7 +94,7 @@ const en = {
     moreLabel: 'More to explore',
     moreHeading: 'Want to see the work behind the work?',
     links: [
-      { href: 'https://react-portfolio-wgzp.vercel.app', label: 'Live portfolio' },
+      { href: 'https://new-porfolio-rosy.vercel.app/', label: 'Live portfolio' },
       { href: 'https://github.com/JohnGabriel1998', label: 'GitHub' },
       { href: 'https://linkedin.com/in/johngabrielbagacina', label: 'LinkedIn' },
       { href: 'https://youtu.be/bevnAtDiPUQ?si=uhKGvl3dFoUggTIG', label: 'Speech award' },
@@ -116,7 +116,7 @@ const en = {
         copy:
           'A multilingual portfolio with English and Japanese support, light/dark mode, and a mobile-first responsive experience.',
         tags: ['React', 'TypeScript', 'Tailwind'],
-        link: 'https://react-portfolio-wgzp.vercel.app',
+        link: 'https://new-porfolio-rosy.vercel.app/',
       },
       {
         type: 'tasks',
