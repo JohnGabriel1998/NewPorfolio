@@ -1,0 +1,22 @@
+Subject (EmailJS Subject field — one line only):
+Portfolio inquiry from {{from_name}}
+
+---
+
+Content (EmailJS body — use ONLY if template type is Plain Text, not HTML):
+
+Hello John Gabriel,
+
+You have a new portfolio contact form submission.
+
+Name:     {{from_name}}
+Email:    {{from_email}}
+Sent:     {{submitted_at}}
+
+Message:
+{{message}}
+
+---
+Reply to {{from_email}}.
+
+Automated message from your portfolio website.

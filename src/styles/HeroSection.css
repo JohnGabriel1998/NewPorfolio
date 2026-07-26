@@ -1,0 +1,301 @@
+.hero-art {
+  isolation: isolate;
+  --portrait-tilt-x: 0deg;
+  --portrait-tilt-y: 0deg;
+  --portrait-shift-x: 0px;
+  --portrait-shift-y: 0px;
+}
+
+.hero-art-orbit {
+  position: absolute;
+  z-index: 0;
+  right: -6%;
+  top: -8%;
+  width: 105%;
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+
+.hero-orbit-ring {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(29, 32, 30, 0.22);
+  border-radius: 50%;
+  animation: hero-orbit-spin 28s linear infinite;
+}
+
+.hero-orbit-ring--inner {
+  inset: 14%;
+  border-color: rgba(37, 50, 190, 0.35);
+  animation-direction: reverse;
+  animation-duration: 18s;
+}
+
+.hero-orbit-dot {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: var(--acid);
+  box-shadow: 0 0 0 3px rgba(213, 255, 66, 0.35);
+}
+
+@keyframes hero-orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.portrait-stack {
+  position: absolute;
+  z-index: 1;
+  width: 86%;
+  aspect-ratio: 1;
+  right: 5%;
+  bottom: 1%;
+  transform: perspective(900px) rotateX(var(--portrait-tilt-x)) rotateY(var(--portrait-tilt-y))
+    translate(var(--portrait-shift-x), var(--portrait-shift-y));
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.portrait-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #32130f;
+  border: 10px solid var(--acid);
+  box-shadow:
+    17px 21px 0 var(--orange),
+    0 0 0 2px var(--ink),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  animation: hero-portrait-float 7s ease-in-out infinite;
+}
+
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.portrait-frame::before {
+  content: 'JGCB / FULL-STACK';
+  position: absolute;
+  z-index: 5;
+  left: 18px;
+  bottom: 16px;
+  color: #f5f3ed;
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+html[lang='ja'] .portrait-frame::before {
+  content: 'JGCB / フルスタック';
+}
+
+.portrait-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.portrait-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 12%;
+  filter: saturate(0.88) contrast(1.12) brightness(1.02);
+  transform: scale(1.04);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-art:hover .portrait-media img {
+  transform: scale(1.08);
+}
+
+.portrait-tone {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    145deg,
+    rgba(213, 255, 66, 0.18) 0%,
+    transparent 38%,
+    transparent 55%,
+    rgba(37, 50, 190, 0.22) 100%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.portrait-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 38%, transparent 42%, rgba(29, 32, 30, 0.55) 100%);
+  pointer-events: none;
+}
+
+.portrait-shine {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.35), transparent 48%);
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+
+.portrait-badge {
+  position: absolute;
+  z-index: 6;
+  top: 10%;
+  right: -2%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 10px 12px;
+  background: var(--ink);
+  color: var(--acid);
+  border: 1px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--orange);
+  transform: rotate(6deg);
+  pointer-events: none;
+}
+
+.portrait-badge span {
+  font: 8px 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.85;
+}
+
+.portrait-badge strong {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.hero-art-index {
+  position: absolute;
+  z-index: 2;
+  left: -4%;
+  top: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font: 9px 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  pointer-events: none;
+}
+
+.hero-art-index span {
+  font-size: 11px;
+  opacity: 0.55;
+}
+
+.hero-art-index em {
+  font: italic 500 1.35rem 'Playfair Display', serif;
+  letter-spacing: -0.04em;
+  text-transform: none;
+  color: var(--ink);
+}
+
+.hero-art .circle.one {
+  z-index: 0;
+  right: -28%;
+  top: -20%;
+  opacity: 0.82;
+}
+
+.hero-art .circle.two {
+  z-index: 2;
+  left: -12%;
+  bottom: -8%;
+  width: 31%;
+}
+
+.hero-art .code-card {
+  z-index: 4;
+  right: -9%;
+  bottom: 8%;
+  background: #1d201e;
+  box-shadow: 16px 16px 0 rgba(29, 32, 30, 0.22);
+}
+
+@keyframes hero-portrait-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.portrait-offset {
+  position: absolute;
+  inset: 8% -6% -8% 6%;
+  background: var(--blue);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+  opacity: 0.92;
+}
+
+@media (max-width: 800px) {
+  .hero-art {
+    right: -6vw;
+    bottom: 5vh;
+    transform: scale(0.61);
+    transform-origin: bottom right;
+    opacity: 0.92;
+  }
+
+  .portrait-stack {
+    width: 86%;
+    right: 5%;
+    bottom: 1%;
+  }
+
+  .hero-art-orbit,
+  .hero-art-index,
+  .portrait-offset {
+    display: none;
+  }
+
+  .portrait-badge {
+    top: 6%;
+    right: 0;
+    padding: 7px 9px;
+    transform: rotate(4deg);
+  }
+
+  .portrait-badge strong {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portrait-frame,
+  .hero-orbit-ring {
+    animation: none;
+  }
+
+  .portrait-stack {
+    transform: none;
+  }
+}
