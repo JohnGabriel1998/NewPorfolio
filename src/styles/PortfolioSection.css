@@ -269,11 +269,6 @@ html[lang='ja'] .portfolio-showcase__count-label::after {
 
 .portfolio-showcase .project-link {
   margin-top: 32px;
-  padding: 12px 0;
-  border-bottom: 1px solid rgba(213, 255, 66, 0.55);
-  border-top: none;
-  width: fit-content;
-  max-width: 100%;
 }
 
 .portfolio-showcase__outro {
@@ -308,34 +303,9 @@ html[lang='ja'] .portfolio-showcase__outro-copy span {
 
 .portfolio-showcase__actions {
   width: 100%;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
-}
-
-.portfolio-showcase__actions a {
-  min-height: 88px;
-  padding: 16px;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: space-between;
-  border-radius: 2px;
-  backdrop-filter: blur(6px);
-}
-
-.portfolio-showcase__actions a span {
-  max-width: 12ch;
-  line-height: 1.35;
-}
-
-html[lang='ja'] .portfolio-showcase__actions a span {
-  max-width: 100%;
-  font-size: 10px;
-  letter-spacing: 0.02em;
-  text-transform: none;
-}
-
-.portfolio-showcase__actions a:hover {
-  box-shadow: 6px 6px 0 rgba(29, 32, 30, 0.35);
 }
 
 .portfolio-showcase .project-list:has(.project-item:hover) .project-item:not(:hover) {
@@ -388,8 +358,7 @@ html[lang='ja'] .portfolio-showcase__actions a span {
 
 @media (prefers-reduced-motion: reduce) {
   .portfolio-showcase .project-item__visual,
-  .portfolio-showcase .project-info h3,
-  .portfolio-showcase__actions a {
+  .portfolio-showcase .project-info h3 {
     transition: none;
   }
 

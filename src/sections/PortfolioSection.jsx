@@ -59,7 +59,7 @@ export default function PortfolioSection() {
                   </ul>
                   {project.link && (
                     <a
-                      className="project-link"
+                      className="project-link site-cta"
                       href={project.link}
                       target="_blank"
                       rel="noreferrer"
@@ -80,7 +80,7 @@ export default function PortfolioSection() {
           </div>
           <div className="portfolio-actions portfolio-showcase__actions">
             {p.links.map(({ href, label }, index) => (
-              <a key={index} href={href} target="_blank" rel="noreferrer">
+              <a key={index} className="site-cta site-cta--tile" href={href} target="_blank" rel="noreferrer">
                 <span>{label}</span>
                 <b aria-hidden="true">↗</b>
               </a>

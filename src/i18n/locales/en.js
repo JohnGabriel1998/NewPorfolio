@@ -1,6 +1,11 @@
 const en = {
+  intro: {
+    eyebrow: 'Full-stack · Front-end · Web developer · Japan',
+    name: 'JOHN GABRIEL',
+    skip: 'Skip intro',
+  },
   header: {
-    logoSub: 'Full-stack · Japan',
+    logoSub: 'Full-stack · Web dev · Japan',
     nav: ['Home', 'About', 'Education', 'Services', 'Portfolio', 'Skills', 'Contact'],
     available: 'Available',
     cta: "Let's talk",
@@ -8,21 +13,22 @@ const en = {
     menuClose: 'Close menu',
   },
   hero: {
-    eyebrow: 'Full-stack developer · Japan',
-    titleLines: ['Building useful', 'digital experiences', 'with purpose.'],
+    introLine: 'I am',
+    titleLines: ['JOHN', 'GABRIEL'],
     serifLineIndex: 1,
-    name: 'John Gabriel Caganda Bagacina',
-    stack: 'React · Node.js · MongoDB',
+    roles: ['Full-stack', 'Front-end', 'Web Developer'],
+    rolesHighlightIndex: 2,
+    stack: ['React', 'Node.js', 'MongoDB'],
+    stackLabel: 'Core stack',
     explore: 'Explore my work',
     imageAlt: 'John Gabriel Caganda Bagacina',
     badgeAvailable: 'Available',
-    portraitLabel: 'Portrait',
-    codeCurious: 'curious',
+    codeCurious: 'builder',
   },
   about: {
     eyebrow: '01 / About me',
-    headingBefore: 'A developer who enjoys making complex things feel ',
-    headingEm: 'simple.',
+    headingBefore: 'Turning complex ideas into ',
+    headingEm: 'elegant web products.',
     headingAfter: '',
     paragraphs: [
       'I’m John, a motivated Full-Stack Developer currently based in Japan. I build responsive, accessible web applications and RESTful APIs with a focus on practical user experience.',
@@ -39,7 +45,7 @@ const en = {
   education: {
     eyebrow: '02 / Education & recognition',
     headingLine1: 'Always learning.',
-    headingEm: 'Always building.',
+    headingEm: 'Always shipping.',
     items: [
       {
         period: '2024 - 2026',
@@ -88,8 +94,8 @@ const en = {
   },
   portfolio: {
     eyebrow: '04 / Selected work',
-    headingLine1: 'Projects with',
-    headingEm: 'real intent.',
+    headingLine1: 'Work I\'m',
+    headingEm: 'proud of.',
     visitLink: 'Visit live project',
     moreLabel: 'More to explore',
     moreHeading: 'Want to see the work behind the work?',
@@ -174,13 +180,13 @@ const en = {
   },
   contact: {
     eyebrow: '06 / Get in touch',
-    headingLine1: 'Let’s build',
+    headingLine1: 'Let’s create',
     headingLine2Before: 'something ',
-    headingLine2Em: 'great.',
+    headingLine2Em: 'together.',
     github: 'GitHub ↗',
     linkedin: 'LinkedIn ↗',
     footerLeft: '© 2026 JGCB',
-    footerRight: 'Designed & built with purpose',
+    footerRight: 'Designed & built by John Gabriel',
     form: {
       lead: 'Send a message — it goes straight to my inbox.',
       name: 'Name',

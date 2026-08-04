@@ -6,7 +6,7 @@ export default function ResumeLink({ className = 'resume-link' }) {
 
   return (
     <a
-      className={className}
+      className={`site-cta site-cta--ink ${className}`.trim()}
       href={r.href}
       target="_blank"
       rel="noreferrer noopener"

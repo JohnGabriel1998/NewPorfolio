@@ -1,6 +1,11 @@
 const ja = {
+  intro: {
+    eyebrow: 'フルスタック · フロントエンド · Web開発 · 日本',
+    name: 'ジョン ガブリエル',
+    skip: 'スキップ',
+  },
   header: {
-    logoSub: 'フルスタック · 日本',
+    logoSub: 'フルスタック · Web開発 · 日本',
     nav: ['ホーム', '自己紹介', '学歴', 'サービス', '制作実績', 'スキル', 'お問い合わせ'],
     available: '対応可能',
     cta: '相談する',
@@ -8,22 +13,23 @@ const ja = {
     menuClose: 'メニューを閉じる',
   },
   hero: {
-    eyebrow: 'フルスタック開発者 · 日本',
-    titleLines: ['役に立つ', 'デジタル体験を', '目的を持ってつくる。'],
+    introLine: '私は',
+    titleLines: ['ジョン', 'ガブリエル'],
     serifLineIndex: 1,
-    name: 'John Gabriel Caganda Bagacina',
-    stack: 'React · Node.js · MongoDB',
+    roles: ['フルスタック', 'フロントエンド', 'Web開発者'],
+    rolesHighlightIndex: 2,
+    stack: ['React', 'Node.js', 'MongoDB'],
+    stackLabel: '主要スタック',
     explore: '制作実績を見る',
     imageAlt: 'John Gabriel Caganda Bagacina',
     badgeAvailable: '対応可能',
-    portraitLabel: 'ポートレート',
-    codeCurious: 'curious',
+    codeCurious: 'builder',
   },
   about: {
     eyebrow: '01 / 自己紹介',
-    headingBefore: '複雑なものを、',
-    headingEm: 'シンプル',
-    headingAfter: 'に感じさせる開発が好きです。',
+    headingBefore: '複雑なアイデアを、',
+    headingEm: '洗練されたWebプロダクト',
+    headingAfter: 'へ。',
     paragraphs: [
       '日本在住のフルスタック開発者、John です。レスポンシブでアクセシブルな Web アプリケーションと RESTful API を、実用的なユーザー体験を軸に構築しています。',
       '開発実務に加え、チームワークと英語・日本語でのコミュニケーションも強みです。',
@@ -39,7 +45,7 @@ const ja = {
   education: {
     eyebrow: '02 / 学歴・受賞',
     headingLine1: '学び続け、',
-    headingEm: 'つくり続ける。',
+    headingEm: '届け続ける。',
     items: [
       {
         period: '2024 - 2026',
@@ -88,8 +94,8 @@ const ja = {
   },
   portfolio: {
     eyebrow: '04 / 制作実績',
-    headingLine1: '意図のある',
-    headingEm: 'プロジェクト。',
+    headingLine1: '自信を持って',
+    headingEm: '届けた作品。',
     visitLink: '公開サイトを見る',
     moreLabel: 'もっと見る',
     moreHeading: '制作の背景も知りたいですか？',
@@ -174,12 +180,12 @@ const ja = {
   contact: {
     eyebrow: '06 / お問い合わせ',
     headingLine1: '一緒に',
-    headingLine2Before: '',
-    headingLine2Em: '素晴らしいものをつくりましょう。',
+    headingLine2Before: '何かを',
+    headingLine2Em: 'つくりましょう。',
     github: 'GitHub ↗',
     linkedin: 'LinkedIn ↗',
     footerLeft: '© 2026 JGCB',
-    footerRight: '目的を持って設計・開発',
+    footerRight: 'John Gabriel が設計・開発',
     form: {
       lead: 'メッセージを送ると、受信トレイに届きます。',
       name: 'お名前',

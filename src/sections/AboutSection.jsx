@@ -22,7 +22,7 @@ export default function AboutSection() {
           {a.paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
-          <a className="text-link" href="#contact">
+          <a className="site-cta site-cta--ink" href="#contact">
             {a.link}
           </a>
         </Reveal>

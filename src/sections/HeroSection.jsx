@@ -44,7 +44,7 @@ export default function HeroSection() {
     <section id="home" className="hero">
       <div className="hero-copy">
         <Reveal>
-          <p className="eyebrow">{h.eyebrow}</p>
+          <p className="hero-intro">{h.introLine}</p>
         </Reveal>
         <h1>
           {h.titleLines.map((line, index) => (
@@ -54,12 +54,24 @@ export default function HeroSection() {
           ))}
         </h1>
         <Reveal className="hero-bottom">
-          <p>
-            {h.name}
-            <br />
-            {h.stack}
-          </p>
-          <a href="#portfolio">
+          <div className="hero-tagline">
+            <p className="hero-roles">
+              {h.roles.map((role, index) => (
+                <span key={role} className="hero-role">
+                  {index > 0 && <span className="hero-role-sep" aria-hidden="true">·</span>}
+                  <span className={index === h.rolesHighlightIndex ? 'hero-role-em' : undefined}>
+                    {role}
+                  </span>
+                </span>
+              ))}
+            </p>
+            <ul className="hero-stack" aria-label={h.stackLabel}>
+              {h.stack.map((tech) => (
+                <li key={tech}>{tech}</li>
+              ))}
+            </ul>
+          </div>
+          <a className="site-cta" href="#portfolio">
             {h.explore} <b>↓</b>
           </a>
         </Reveal>
@@ -75,17 +87,9 @@ export default function HeroSection() {
           '--portrait-shift-y': '0px',
         }}
       >
-        <div className="hero-art-orbit" aria-hidden="true">
-          <span className="hero-orbit-ring" />
-          <span className="hero-orbit-ring hero-orbit-ring--inner" />
-          <span className="hero-orbit-dot" />
-        </div>
-
-        <div className="circle one" />
-        <div className="circle two" />
+        <div className="circle one" aria-hidden="true" />
 
         <div className="portrait-stack">
-          <div className="portrait-offset" aria-hidden="true" />
           <figure className="portrait-frame">
             <div className="portrait-media">
               <img
@@ -105,11 +109,6 @@ export default function HeroSection() {
               <strong>2026</strong>
             </figcaption>
           </figure>
-        </div>
-
-        <div className="hero-art-index" aria-hidden="true">
-          <span>00</span>
-          <em>{h.portraitLabel}</em>
         </div>
 
         <div className="code-card">

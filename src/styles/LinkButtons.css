@@ -1,0 +1,78 @@
+.site-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  font: 700 12px Manrope, Arial, sans-serif;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  background: var(--acid);
+  color: var(--ink);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.site-cta:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.site-cta b,
+.site-cta > span[aria-hidden='true'] {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.site-cta--ink {
+  background: var(--ink);
+  color: var(--acid);
+}
+
+.site-cta--ink:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.site-cta--tile {
+  min-height: 88px;
+  width: 100%;
+  padding: 16px 18px;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  font: 700 11px Manrope, Arial, sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.site-cta--tile > span:first-child {
+  max-width: 14ch;
+  line-height: 1.35;
+  text-transform: none;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+html[lang='ja'] .site-cta--tile > span:first-child {
+  max-width: 100%;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+}
+
+.site-cta--tile b {
+  font-size: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-cta {
+    transition: none;
+  }
+}
