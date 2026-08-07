@@ -1,0 +1,138 @@
+html.is-intro-active,
+html.is-intro-active body {
+  overflow: hidden;
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  pointer-events: auto;
+}
+
+.intro-overlay__backdrop {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.intro-overlay--exit .intro-overlay__backdrop {
+  opacity: 0;
+}
+
+.intro-overlay__skip {
+  position: absolute;
+  z-index: 3;
+  top: clamp(18px, 4vw, 28px);
+  right: clamp(18px, 4vw, 28px);
+  padding: 10px 14px;
+  border: 1px solid rgba(245, 243, 237, 0.28);
+  border-radius: 999px;
+  background: rgba(245, 243, 237, 0.06);
+  color: var(--paper);
+  font: 10px 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.intro-overlay__skip:hover {
+  background: rgba(245, 243, 237, 0.14);
+  border-color: rgba(213, 255, 66, 0.55);
+}
+
+.intro-overlay__stage {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 6vw;
+  transform-origin: center center;
+  will-change: transform, opacity;
+}
+
+.intro-overlay--exit .intro-overlay__stage {
+  animation: introZoomThrough 0.9s cubic-bezier(0.55, 0.06, 0.22, 0.99) forwards;
+}
+
+.intro-overlay__eyebrow {
+  margin: 0 0 20px;
+  font: 10px 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(245, 243, 237, 0.62);
+  opacity: 0;
+  transform: translateY(18px);
+  animation: introNameIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) 0.15s forwards;
+}
+
+.intro-overlay__name {
+  margin: 0;
+  font-size: clamp(3rem, 12vw, 8rem);
+  line-height: 0.87;
+  letter-spacing: -0.09em;
+  color: var(--paper);
+}
+
+.intro-overlay__name span {
+  display: block;
+  opacity: 0;
+  transform: translateY(28px);
+  animation: introNameIn 0.75s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.intro-overlay__name-serif {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: -0.06em;
+}
+
+html[lang='ja'] .intro-overlay__name-serif {
+  font-family: Manrope, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+@keyframes introNameIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes introZoomThrough {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(18);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .intro-overlay__name {
+    font-size: clamp(2.5rem, 16vw, 5rem);
+  }
+
+  .intro-overlay__skip {
+    top: 14px;
+    right: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-overlay__stage,
+  .intro-overlay__eyebrow,
+  .intro-overlay__name span {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

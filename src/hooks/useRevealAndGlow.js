@@ -8,8 +8,18 @@ function revealInView(element, threshold = 0.12) {
   return visible / Math.max(rect.height, 1) >= threshold;
 }
 
-export default function useRevealAndGlow(locale) {
+export function refreshVisibleReveals() {
+  document.querySelectorAll('.reveal').forEach((element) => {
+    if (revealInView(element)) {
+      element.classList.add('visible');
+    }
+  });
+}
+
+export default function useRevealAndGlow(locale, introReady = true) {
   useEffect(() => {
+    if (!introReady) return undefined;
+
     const glow = document.querySelector('.glow');
     const move = (event) => {
       if (!glow) return;
@@ -46,5 +56,15 @@ export default function useRevealAndGlow(locale) {
       observer.disconnect();
       window.removeEventListener('pointermove', move);
     };
-  }, [locale]);
+  }, [locale, introReady]);
+
+  useEffect(() => {
+    if (!introReady) return undefined;
+
+    const frame = requestAnimationFrame(() => {
+      refreshVisibleReveals();
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [introReady]);
 }

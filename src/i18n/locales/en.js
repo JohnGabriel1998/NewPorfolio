@@ -1,7 +1,8 @@
 const en = {
   intro: {
     eyebrow: 'Full-stack · Front-end · Web developer · Japan',
-    name: 'JOHN GABRIEL',
+    nameLines: ['JOHN', 'GABRIEL'],
+    serifLineIndex: 1,
     skip: 'Skip intro',
   },
   header: {

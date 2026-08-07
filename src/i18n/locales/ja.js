@@ -1,7 +1,8 @@
 const ja = {
   intro: {
     eyebrow: 'フルスタック · フロントエンド · Web開発 · 日本',
-    name: 'ジョン ガブリエル',
+    nameLines: ['ジョン', 'ガブリエル'],
+    serifLineIndex: 1,
     skip: 'スキップ',
   },
   header: {
