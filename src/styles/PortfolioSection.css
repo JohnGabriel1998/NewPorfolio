@@ -237,6 +237,32 @@ html[lang='ja'] .portfolio-showcase__count-label::after {
   opacity: 0.75;
 }
 
+.portfolio-showcase .project-visual.devflow {
+  background: #201f1d;
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 9%;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.devflow span {
+  font-size: clamp(2.1rem, 5.2vw, 4.2rem);
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.devflow i {
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: 0.18em;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.75;
+  color: var(--acid);
+}
+
 .portfolio-showcase .project-item__content {
   padding: 8px 0 8px 12px;
   position: relative;

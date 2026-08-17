@@ -62,6 +62,15 @@ export default function ProjectVisual({ type }) {
     );
   }
 
+  if (type === 'devflow') {
+    return (
+      <div className="project-visual devflow">
+        <span>DEVFLOW</span>
+        <i>PLAN · BUILD · SHIP</i>
+      </div>
+    );
+  }
+
   return (
     <div className="project-visual apparel">
       <span>SEVEN</span>

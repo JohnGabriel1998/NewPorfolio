@@ -39,7 +39,7 @@ const ja = {
     facts: [
       ['8+', '主要技術'],
       ['3', '使用言語'],
-      ['7', '掲載プロジェクト'],
+      ['8', '掲載プロジェクト'],
       ['日本', '拠点'],
     ],
   },
@@ -167,6 +167,15 @@ const ja = {
           '支出の記録と確認ができるパーソナルファイナンスのダッシュボード。日々の家計をわかりやすく把握できます。',
         tags: ['React', 'JavaScript', 'Dashboard'],
         link: 'https://expense-tracker-mocha-iota-40.vercel.app/',
+      },
+      {
+        type: 'devflow',
+        date: '08 · 2026',
+        title: 'DevFlow — Plan. Build. Ship.',
+        copy:
+          'プロジェクト、課題、サイクル、ロードマップを扱うチーム向けワークスペース。Driver.js によるプロダクトツアーで、ダッシュボードの使い方を案内します。',
+        tags: ['Next.js', 'MongoDB', 'Driver.js'],
+        link: 'https://devflow-platform-imry.vercel.app/',
       },
     ],
   },

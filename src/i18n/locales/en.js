@@ -39,7 +39,7 @@ const en = {
     facts: [
       ['8+', 'Core technologies'],
       ['3', 'Languages spoken'],
-      ['7', 'Featured projects'],
+      ['8', 'Featured projects'],
       ['Japan', 'Current base'],
     ],
   },
@@ -168,6 +168,15 @@ const en = {
           'A personal finance dashboard for tracking expenses, reviewing spending, and keeping everyday money decisions clear.',
         tags: ['React', 'JavaScript', 'Dashboard'],
         link: 'https://expense-tracker-mocha-iota-40.vercel.app/',
+      },
+      {
+        type: 'devflow',
+        date: '08 · 2026',
+        title: 'DevFlow — Plan. Build. Ship.',
+        copy:
+          'A team workspace for projects, issues, cycles, and roadmaps, with a Driver.js product tour that walks new users through the dashboard.',
+        tags: ['Next.js', 'MongoDB', 'Driver.js'],
+        link: 'https://devflow-platform-imry.vercel.app/',
       },
     ],
   },
