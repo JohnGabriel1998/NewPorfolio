@@ -44,6 +44,24 @@ export default function ProjectVisual({ type }) {
     );
   }
 
+  if (type === 'notes') {
+    return (
+      <div className="project-visual notes">
+        <span>SCRIBE</span>
+        <i>NOTES</i>
+      </div>
+    );
+  }
+
+  if (type === 'expense') {
+    return (
+      <div className="project-visual expense">
+        <span>FLOW</span>
+        <i>EXPENSE</i>
+      </div>
+    );
+  }
+
   return (
     <div className="project-visual apparel">
       <span>SEVEN</span>

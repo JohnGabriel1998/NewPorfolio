@@ -39,7 +39,7 @@ const ja = {
     facts: [
       ['8+', '主要技術'],
       ['3', '使用言語'],
-      ['5', '掲載プロジェクト'],
+      ['7', '掲載プロジェクト'],
       ['日本', '拠点'],
     ],
   },
@@ -149,6 +149,24 @@ const ja = {
         copy: 'アパレル商品の閲覧・購入フローを備えたレスポンシブ EC 体験。',
         tags: ['React', 'JavaScript', 'E-commerce'],
         link: 'https://seven-apparel-slve.vercel.app/',
+      },
+      {
+        type: 'notes',
+        date: '06 · 2026',
+        title: 'Scribe — プライベートノート',
+        copy:
+          'アイデアの作成・編集・整理ができるプライベートなノートワークスペース。集中できる UI で実現。',
+        tags: ['React', 'JavaScript', 'Local Storage'],
+        link: 'https://scribe-note-app.vercel.app/',
+      },
+      {
+        type: 'expense',
+        date: '07 · 2026',
+        title: 'ExpenseFlow — 家計管理ダッシュボード',
+        copy:
+          '支出の記録と確認ができるパーソナルファイナンスのダッシュボード。日々の家計をわかりやすく把握できます。',
+        tags: ['React', 'JavaScript', 'Dashboard'],
+        link: 'https://expense-tracker-mocha-iota-40.vercel.app/',
       },
     ],
   },

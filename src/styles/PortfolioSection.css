@@ -187,6 +187,56 @@ html[lang='ja'] .portfolio-showcase__count-label::after {
   box-shadow: none;
 }
 
+.portfolio-showcase .project-visual.notes {
+  background: #edeee6;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 9%;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.notes span {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.notes i {
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: 0.25em;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.portfolio-showcase .project-visual.expense {
+  background: var(--blue);
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 9%;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.expense span {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.1em;
+}
+
+.portfolio-showcase .project-visual.expense i {
+  font: 11px 'DM Mono', monospace;
+  letter-spacing: 0.25em;
+  font-style: normal;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
 .portfolio-showcase .project-item__content {
   padding: 8px 0 8px 12px;
   position: relative;

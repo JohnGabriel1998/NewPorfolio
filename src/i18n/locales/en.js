@@ -39,7 +39,7 @@ const en = {
     facts: [
       ['8+', 'Core technologies'],
       ['3', 'Languages spoken'],
-      ['5', 'Featured projects'],
+      ['7', 'Featured projects'],
       ['Japan', 'Current base'],
     ],
   },
@@ -150,6 +150,24 @@ const en = {
           'A responsive e-commerce experience for clothing products with straightforward browsing and shopping interactions.',
         tags: ['React', 'JavaScript', 'E-commerce'],
         link: 'https://seven-apparel-slve.vercel.app/',
+      },
+      {
+        type: 'notes',
+        date: '06 · 2026',
+        title: 'Scribe — Private Notes Workspace',
+        copy:
+          'A private notes workspace for writing, editing, and organizing ideas with a focused, distraction-free interface.',
+        tags: ['React', 'JavaScript', 'Local Storage'],
+        link: 'https://scribe-note-app.vercel.app/',
+      },
+      {
+        type: 'expense',
+        date: '07 · 2026',
+        title: 'ExpenseFlow — Personal Finance Dashboard',
+        copy:
+          'A personal finance dashboard for tracking expenses, reviewing spending, and keeping everyday money decisions clear.',
+        tags: ['React', 'JavaScript', 'Dashboard'],
+        link: 'https://expense-tracker-mocha-iota-40.vercel.app/',
       },
     ],
   },
